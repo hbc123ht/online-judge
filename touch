@@ -1,0 +1,8 @@
+[program:wsevent]
+command=/usr/bin/node /home/vito/Documents/project/dmoj/site/websocket/daemon.js
+environment=NODE_PATH="/home/vito/Documents/project/dmoj/site/node_modules"
+# Should create a dedicated user.
+;user=forge
+;group=forge
+stdout_logfile=/tmp/wsevent.stdout.log
+stderr_logfile=/tmp/wsevent.stderr.log

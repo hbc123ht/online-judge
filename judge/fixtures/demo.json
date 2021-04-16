@@ -164,7 +164,7 @@
     },
     {
         "fields": {
-            "domain": "localhost:8081",
+            "domain": "127.0.0.1",
             "name": "DMOJ: Modern Online Judge"
         },
         "model": "sites.site",
