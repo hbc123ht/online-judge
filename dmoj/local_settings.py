@@ -38,7 +38,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dmoj',
         'USER': 'dmoj',
-        'PASSWORD': 'hbc123vnjp',
+        'PASSWORD': 'tmath123@',
         'HOST': '127.0.0.1',
         'OPTIONS': {
             'charset': 'utf8mb4',
