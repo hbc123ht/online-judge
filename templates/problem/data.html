@@ -15,6 +15,10 @@
                 if (!$select.val() && ~window.valid_files.indexOf(file))
                     $select.val(file).trigger('change');
             }
+            function fill_selections($select, file) {
+                if (!$select.val() && ~window.valid_files.indexOf(file))
+                    $select.val(file).trigger('change');
+            }
 
             var $table = $('#case-table');
             $table.on('add-row', function (e, $tr) {
@@ -195,7 +199,42 @@
                 window.scrollBy(0, $tr.height());
                 return false;
             });
-
+            $('a#auto-fill').click(function () {
+                var cases = new Array()
+                for (i = 0;i < valid_files.length; i++){
+                    if (valid_files[i].endsWith('in') || valid_files[i].endsWith('inp')){
+                        cases.push(valid_files[i]);
+                    }
+                }
+                if (cases.length == 0){
+                    alert("The test data is empty or in the wrong format. Each test case should end with .in or .inp and .out");
+                }
+                $tr = $($table.find('.extra-row-body').html()
+                    .replace(/__prefix__/g, $total.val()));
+                
+                while($total.val() < cases.length){
+                    $('a#add-case-row').click();
+                }
+                for (i = 0;i < cases.length; i++){
+                    fill_selections($('select#id_cases-' + i + '-input_file'), cases[i]);
+                    fill_selections($('select#id_cases-' + i + '-output_file'), cases[i].replace(/inp(?!.*?in)/, 'out'));
+                    $('input[id=id_cases-' + i + '-points]').val(1);
+                }
+                return false;
+            });
+            
+            $('#delete_all').on('click',function(){
+                if(this.checked) {
+                    for (i = 0;i < $total.val(); i++){
+                        $('input[id=id_cases-' + i + '-DELETE]').prop('checked', true);
+                    }
+                }
+                else {
+                    for (i = 0;i < $total.val(); i++){
+                        $('input[id=id_cases-' + i + '-DELETE]').prop('checked', false);
+                    }
+                }
+            });
             var oldIndex;
             $table.sortable({
                 containerSelector: 'table',
@@ -248,7 +287,9 @@
                 $this.prop('checked', filled).trigger('change');
             });
         });
+        
     </script>
+    
 {% endblock %}
 
 {% block media %}
@@ -374,6 +415,9 @@
                 <input type="checkbox" data-suffix="generator_args">
                 {{ _('Generator args') }}
             </label>
+            <label>    
+                <a id="auto-fill" href="#"><i class="fa"></i> {{ _('Auto fill') }}</a>
+            </label>
         </div>
         <table id="case-table" class="table">
             <thead>
@@ -389,7 +433,9 @@
                 <th class="checker">{{ _('Checker') }}</th>
                 <th class="generator-args">{{ _('Generator args') }}</th>
                 {% if cases_formset.can_delete %}
-                    <th>{{ _('Delete?') }}</th>
+                    <th>{{ _('Delete?') }}
+                        <input type="checkbox" name="delete_all" id="delete_all" />
+                    </th>
                 {% endif %}
             </tr>
             </thead>
