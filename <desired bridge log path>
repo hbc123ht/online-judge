@@ -514,3 +514,18 @@ INFO 2021-04-15 15:10:30,217 judge_handler hbc123ht: Grading has ended on: 22
 INFO 2021-04-15 15:10:30,218 judge_list Judge available after grading 22: hbc123ht
 INFO 2021-04-15 16:23:58,431 daemon Exiting due to SIGINT
 INFO 2021-04-16 00:10:10,564 daemon Exiting due to SIGINT
+INFO 2021-04-16 00:39:21,300 daemon Exiting due to SIGINT
+INFO 2021-04-16 00:41:39,746 daemon Exiting due to SIGINT
+INFO 2021-04-16 10:13:12,047 daemon Exiting due to SIGINT
+INFO 2021-04-17 06:25:59,156 daemon Exiting due to SIGINT
+INFO 2021-04-17 14:52:04,089 daemon Exiting due to SIGINT
+INFO 2021-04-18 06:39:43,614 daemon Exiting due to SIGINT
+INFO 2021-04-18 11:28:57,180 daemon Exiting due to SIGINT
+INFO 2021-04-18 16:43:53,219 daemon Exiting due to SIGINT
+INFO 2021-04-19 11:24:55,894 daemon Exiting due to SIGINT
+INFO 2021-04-19 12:51:28,414 daemon Exiting due to SIGINT
+INFO 2021-04-19 16:35:36,632 daemon Exiting due to SIGINT
+INFO 2021-04-19 16:36:47,195 daemon Exiting due to SIGINT
+INFO 2021-04-20 13:12:19,284 daemon Exiting due to SIGINT
+INFO 2021-04-21 04:33:30,191 daemon Exiting due to SIGINT
+INFO 2021-04-21 04:34:07,270 daemon Exiting due to SIGINT
