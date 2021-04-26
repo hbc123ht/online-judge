@@ -1,0 +1,233 @@
+.content-description {
+  line-height: 1.5em;
+  font-size: 1em;
+  font-family: "Segoe UI", "Lucida Grande", Arial, sans-serif;
+}
+.content-description p {
+  margin: 1em 0 !important;
+  padding: 0 !important;
+}
+.content-description img {
+  max-width: 100%;
+  height: auto;
+}
+.content-description h1, .content-description h2, .content-description h3, .content-description h4, .content-description h5, .content-description h6 {
+  font-weight: normal;
+  color: #111;
+  margin-bottom: 0.75em;
+  padding: 0;
+  background: 0;
+}
+.content-description h3, .content-description h4, .content-description h5, .content-description h6 {
+  font-weight: bold;
+}
+.content-description h1 {
+  font-size: 2.5em;
+}
+.content-description h2 {
+  font-size: 2em;
+}
+.content-description h3 {
+  font-size: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+.content-description h4 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #EEE;
+  line-height: 1.225;
+  padding-bottom: 0.3em;
+  padding-top: 0.5em;
+}
+.content-description h5 {
+  font-size: 1.15em;
+  margin-top: 0;
+}
+.content-description h6 {
+  font-size: 0.9em;
+}
+.content-description blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 1.5em;
+  border-left: 0.5em #EEE solid;
+}
+.content-description hr {
+  display: block;
+  height: 0;
+  border: 0;
+  font-style: italic;
+  border-bottom: 1px solid #ccc;
+  margin: 25px 0 20px 0;
+  padding: 0;
+}
+.content-description pre, .content-description code, .content-description kbd, .content-description samp, .content-description span.code {
+  color: #000;
+  page-break-inside: avoid;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 0.98em;
+}
+.content-description code, .content-description span.code {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
+  margin: 0 2px;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  font-size: 0.95em;
+  color: #444;
+}
+.content-description pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 1.5em 0 1.5em 0;
+  padding: 1em;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: black;
+  border-radius: 4px;
+}
+.content-description pre code, .content-description pre div.code {
+  border: 0;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1em;
+  color: black;
+}
+.content-description b, .content-description strong {
+  font-weight: bold;
+}
+.content-description dfn {
+  font-style: italic;
+}
+.content-description ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+.content-description mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+.content-description sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.content-description sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+.content-description sub {
+  bottom: -0.25em;
+}
+.content-description ul, .content-description ol {
+  padding: 0 0 0 2em !important;
+}
+.content-description li p:last-child {
+  margin: 0;
+}
+.content-description dd {
+  margin: 0 0 0 2em;
+}
+.content-description img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+.content-description td {
+  vertical-align: top;
+}
+
+.display-math {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 700px) {
+  #common-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  #content-left {
+    -webkit-box-flex: 86%;
+    -webkit-flex: 86%;
+            flex: 86%;
+    width: 100%;
+  }
+  #content-left.split-common-content {
+    width: 70%;
+  }
+  #content-left .content-description {
+    width: 100%;
+  }
+
+  #content-right {
+    -webkit-box-flex: 14%;
+    -webkit-flex: 14%;
+            flex: 14%;
+    max-width: 12.5em;
+    min-width: 8em;
+    padding-left: 1.5em;
+    padding-top: 1em;
+  }
+  #content-right .info-float {
+    float: none;
+    padding: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    width: 100%;
+  }
+}
+@media not all and (min-width: 700px) {
+  #content-right .info-float {
+    float: none;
+    width: 100% !important;
+    position: static !important;
+    box-sizing: border-box;
+  }
+}
+a.view-pdf {
+  padding-top: 0.6em;
+  display: inline-block;
+}
+
+.problem-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.problem-title .spacer {
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 1px;
+          flex: 1 1 1px;
+}
+
+.info-float .fa {
+  color: #000;
+  padding-right: 0.2em;
+}
+
+#problem-types .toggled, #allowed-langs .toggled {
+  margin-left: 1.3em;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Jlc291cmNlcy9jb250ZW50LWRlc2NyaXB0aW9uLnNjc3MiLCIuLi9yZXNvdXJjZXMvYmFzZS1kZXNjcmlwdGlvbi5zY3NzIiwiLi4vc2Fzc19wcm9jZXNzZWQvY29udGVudC1kZXNjcmlwdGlvbi5jc3MiLCIuLi9yZXNvdXJjZXMvdmFycy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VDQ0ksa0JBQUE7RUFDQSxjQUFBO0VBQ0EsMkRBQUE7QUNESjtBREdJO0VBQ0ksd0JBQUE7RUFDQSxxQkFBQTtBQ0RSO0FESUk7RUFDSSxlQUFBO0VBQ0EsWUFBQTtBQ0ZSO0FES0k7RUFDSSxtQkFBQTtFQUNBLFdBQUE7RUFDQSxxQkFBQTtFQUNBLFVBQUE7RUFDQSxhQUFBO0FDSFI7QURNSTtFQUNJLGlCQUFBO0FDSlI7QURPSTtFQUNJLGdCQUFBO0FDTFI7QURRSTtFQUNJLGNBQUE7QUNOUjtBRFNJO0VBQ0ksZ0JBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtBQ1BSO0FEVUk7RUFDSSxnQkFBQTtFQUNBLDZCQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQkFBQTtFQUNBLGtCQUFBO0FDUlI7QURXSTtFQUNJLGlCQUFBO0VBQ0EsYUFBQTtBQ1RSO0FEWUk7RUFDSSxnQkFBQTtBQ1ZSO0FEYUk7RUFDSSxXQUFBO0VBQ0EsU0FBQTtFQUNBLG1CQUFBO0VBQ0EsNkJBQUE7QUNYUjtBRGNJO0VBQ0ksY0FBQTtFQUNBLFNBQUE7RUFDQSxTQUFBO0VBQ0Esa0JBQUE7RUFDQSw2QkFBQTtFQUNBLHFCQUFBO0VBQ0EsVUFBQTtBQ1pSO0FEZUk7RUFDSSxXQUFBO0VBQ0Esd0JBQUE7RUFDQSxpT0VwRVU7RUZxRVYsaUJBQUE7QUNiUjtBRGdCSTtFQUNJLDRPQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7RUFDQSxzQkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JFbEZlO0VGbUZmLGlCQUFBO0VBQ0EsV0FBQTtBQ2RSO0FEaUJJO0VBV0kscUJBQUE7RUFDQSxxQkFBQTtFQUNBLHVCQUFBO0VBQ0EsWUFBQTtFQUNBLHNCQUFBO0VBQ0EseUJBQUE7RUFDQSxZQUFBO0VBQ0Esa0JFekdlO0FEZ0Z2QjtBRFFRO0VBQ0ksU0FBQTtFQUNBLGdCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7RUFDQSx1QkFBQTtFQUNBLGNBQUE7RUFDQSxZQUFBO0FDTlo7QURtQkk7RUFDSSxpQkFBQTtBQ2pCUjtBRG9CSTtFQUNJLGtCQUFBO0FDbEJSO0FEcUJJO0VBQ0ksZ0JBQUE7RUFDQSxXQUFBO0VBQ0EscUJBQUE7QUNuQlI7QURzQkk7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0FDcEJSO0FEdUJJO0VBQ0ksY0FBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLHdCQUFBO0FDckJSO0FEd0JJO0VBQ0ksY0FBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLHdCQUFBO0VBQ0EsV0FBQTtBQ3RCUjtBRHlCSTtFQUNJLGVBQUE7QUN2QlI7QUQwQkk7RUFDSSw2QkFBQTtBQ3hCUjtBRDJCSTtFQUNJLFNBQUE7QUN6QlI7QUQ0Qkk7RUFDSSxpQkFBQTtBQzFCUjtBRDZCSTtFQUNJLFNBQUE7RUFDQSwrQkFBQTtFQUNBLHNCQUFBO0FDM0JSO0FEOEJJO0VBQ0ksbUJBQUE7QUM1QlI7O0FGN0lBO0VBQ0ksY0FBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBRWdKSjs7QUY3SUE7RUFDSTtJQUNJLG9CQUFBO0lBQUEscUJBQUE7SUFBQSxhQUFBO0lBQ0EsOEJBQUE7SUFBQSw4QkFBQTtJQUFBLG1DQUFBO1lBQUEsMkJBQUE7RUVnSk47O0VGN0lFO0lBQ0kscUJBQUE7SUFBQSxpQkFBQTtZQUFBLFNBQUE7SUFDQSxXQUFBO0VFZ0pOO0VGOUlNO0lBQ0ksVUFBQTtFRWdKVjtFRjdJTTtJQUNJLFdBQUE7RUUrSVY7O0VGM0lFO0lBQ0kscUJBQUE7SUFBQSxpQkFBQTtZQUFBLFNBQUE7SUFDQSxpQkFBQTtJQUNBLGNBQUE7SUFDQSxtQkFBQTtJQUNBLGdCQUFBO0VFOElOO0VGNUlNO0lBQ0ksV0FBQTtJQUNBLFVBQUE7SUFDQSx3QkFBQTtJQUFBLGdCQUFBO0lBQ0EsU0FBQTtJQUNBLFdBQUE7RUU4SVY7QUFDRjtBRjFJQTtFQUNJO0lBQ0ksV0FBQTtJQUNBLHNCQUFBO0lBQ0EsMkJBQUE7SUFDQSxzQkFBQTtFRTRJTjtBQUNGO0FGeklBO0VBQ0ksa0JBQUE7RUFDQSxxQkFBQTtBRTJJSjs7QUZ4SUE7RUFDSSxvQkFBQTtFQUNBLHFCQUFBO0VBRUEsYUFBQTtBRTJJSjtBRnpJSTtFQUNJLHFCQUFBO0VBQ0EsbUJBQUE7RUFBQSxxQkFBQTtVQUFBLGFBQUE7QUUySVI7O0FGdklBO0VBQ0ksV0FBQTtFQUNBLG9CQUFBO0FFMElKOztBRnRJSTtFQUNJLGtCQUFBO0FFeUlSIiwiZmlsZSI6ImNvbnRlbnQtZGVzY3JpcHRpb24uY3NzIn0= */

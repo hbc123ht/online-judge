@@ -53,7 +53,7 @@ DATABASES = {
 
 # Internationalization.
 # Documentation: <https://docs.djangoproject.com/en/1.11/topics/i18n/>
-LANGUAGE_CODE = 'en-ca'
+LANGUAGE_CODE = 'en'
 DEFAULT_USER_TIME_ZONE = 'America/Toronto'
 USE_I18N = True
 USE_L10N = True
@@ -122,7 +122,7 @@ SERVER_EMAIL = 'hbc123ht@gmail.com'
 # webserver to serve the static files. This is the directory where all the 
 # static files DMOJ uses will be collected to.
 # You must configure your webserver to serve this directory as /static/ in production.
-STATIC_ROOT = '/tmp/static/'
+STATIC_ROOT = '/home/vito/Documents/project/dmoj/site/resourcesstatic/'
 
 # URL to access static files.
 #STATIC_URL = '/static/'

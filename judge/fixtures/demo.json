@@ -57,7 +57,6 @@
             "is_open": true,
             "slug": "dmoj",
             "name": "DMOJ: Modern Online Judge",
-            "registrant": 1,
             "short_name": "DMOJ",
             "slots": null
         },
@@ -164,7 +163,7 @@
     },
     {
         "fields": {
-            "domain": "127.0.0.1",
+            "domain": "localhost:8081",
             "name": "DMOJ: Modern Online Judge"
         },
         "model": "sites.site",
