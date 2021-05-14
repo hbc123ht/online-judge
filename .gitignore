@@ -12,4 +12,4 @@ resources/table.css
 resources/martor-description.css
 sass_processed
 node_modules
-myenv/
+myenv

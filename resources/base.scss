@@ -172,6 +172,7 @@ header {
     color: #5c5954;
 
     .anon {
+        margin-right: 170px;
         padding-right: 10px;
         display: inline-flex;
         min-height: 100%;
@@ -262,6 +263,7 @@ nav {
             position: relative;
 
             &.home-nav-element a {
+                margin-left: 170px;
                 padding: 0;
                 height: 44px;
 
@@ -346,6 +348,7 @@ nav {
             }
 
             &.home-nav-element a:hover {
+                margin-left: 170px;
                 border-bottom: 0;
                 padding-top: 0;
                 padding-bottom: 0;
