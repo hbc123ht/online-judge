@@ -13,3 +13,6 @@ resources/martor-description.css
 venv
 sass_processed
 node_modules
+dmoj/local_settings.py
+resourcesstatic
+NginxConfig
