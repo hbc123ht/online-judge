@@ -17,7 +17,7 @@
             "points": 0.0,
             "problem_count": 0,
             "rating": null,
-            "timezone": "America/Toronto",
+            "timezone": "Asia/Saigon",
             "user": 1,
             "user_script": ""
         },
@@ -55,9 +55,9 @@
             ],
             "creation_date": "2017-12-02T08:50:25.199Z",
             "is_open": true,
-            "slug": "dmoj",
-            "name": "DMOJ: Modern Online Judge",
-            "short_name": "DMOJ",
+            "slug": "tmath",
+            "name": "TMATH",
+            "short_name": "TMATH",
             "slots": null
         },
         "model": "judge.organization",
@@ -163,7 +163,7 @@
     },
     {
         "fields": {
-            "domain": "localhost:8081",
+            "domain": "tmath.vn",
             "name": "TMath"
         },
         "model": "sites.site",
