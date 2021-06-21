@@ -187,9 +187,10 @@
         <ul id="nav-list">
             <li class="home-nav-element"><a href="{{ url('home') }}">{% include "site-logo-fragment.html" %}</a></li>
             <li class="home-nav-element"><span class="nav-divider"></span></li>
+            <li class="home-menu-item"><a href="{{ url('home') }}" class="nav-home">{{ _('Home') }}</a></li>
             {% for node in mptt_tree(nav_bar) recursive %}
                 <li>
-                    <a href="{{ node.path }}" class="nav-{{ node.key }} {% if node.key in nav_tab %} glow-on-hoverr {% else %} glow-on-hover {% endif %}">
+                    <a href="{{ node.path }}" class="nav-{{ node.key }}{% if node.key in nav_tab %} active{% endif %}">
                         {{ user_trans(node.label) }}
                         {% if not node.is_leaf_node %}
                             <div href="javascript:void(0)" class="nav-expand">></div>
@@ -200,7 +201,6 @@
                     {% endwith %}
                 </li>
             {% endfor %}
-            
         </ul>
 
         <span id="user-links">
@@ -245,7 +245,23 @@
         </span>
     </div>
     <div id="nav-shadow"></div>
-</nav>  
+</nav>
+{% if request.in_contest %}
+    <div id="contest-info">
+        <a href="{{ url('contest_view', request.participation.contest.key) }}" style="vertical-align: middle">
+            {{ request.participation.contest.name }} -
+            {% if request.participation.spectate %}
+                {{ _('spectating') }}
+            {% elif request.participation.end_time %}
+                <div id="contest-time-remaining" data-secs="{{ request.participation.time_remaining|seconds }}">
+                    {{ request.participation.time_remaining|timedelta("localized") }}
+                </div>
+            {% else %}
+                {{ _('virtual') }}
+            {% endif %}
+        </a>
+    </div>
+{% endif %}
 <div id="page-container">
     <noscript>
         <div id="noscript">{{ _('This site works best with JavaScript enabled.') }}</div>

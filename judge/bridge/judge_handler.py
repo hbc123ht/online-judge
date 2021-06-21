@@ -245,10 +245,6 @@ class JudgeHandler(ZlibPacketHandler):
         if self.name:
             logger.warning('Judge seems dead: %s: %s', self.name, self._working)
 
-    def malformed_packet(self, exception):
-        logger.exception('Judge sent malformed packet: %s', self.name)
-        super(JudgeHandler, self).malformed_packet(exception)
-
     def on_submission_processing(self, packet):
         _ensure_connection()
 
@@ -613,7 +609,7 @@ class JudgeHandler(ZlibPacketHandler):
             data = self._submission_cache
         else:
             self._submission_cache = data = Submission.objects.filter(id=id).values(
-                'problem__is_public', 'contest_object__key',
+                'problem__is_public', 'contest_object_id',
                 'user_id', 'problem_id', 'status', 'language__key',
             ).get()
             self._submission_cache_id = id
@@ -622,7 +618,7 @@ class JudgeHandler(ZlibPacketHandler):
             event.post('submissions', {
                 'type': 'done-submission' if done else 'update-submission',
                 'state': state, 'id': id,
-                'contest': data['contest_object__key'],
+                'contest': data['contest_object_id'],
                 'user': data['user_id'], 'problem': data['problem_id'],
                 'status': data['status'], 'language': data['language__key'],
             })

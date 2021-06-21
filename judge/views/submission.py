@@ -33,7 +33,7 @@ def submission_related(queryset):
         .only('id', 'user__user__username', 'user__display_rank', 'user__rating', 'problem__name',
               'problem__code', 'problem__is_public', 'language__short_name', 'language__key', 'date', 'time', 'memory',
               'points', 'result', 'status', 'case_points', 'case_total', 'current_testcase', 'contest_object',
-              'locked_after') \
+              'locked_after', 'problem__submission_source_visibility_mode') \
         .prefetch_related('contest_object__authors', 'contest_object__curators')
 
 
@@ -286,6 +286,7 @@ class SubmissionsListBase(DiggPaginatorMixin, TitleMixin, ListView):
         context = super(SubmissionsListBase, self).get_context_data(**kwargs)
         authenticated = self.request.user.is_authenticated
         context['dynamic_update'] = False
+        context['dynamic_contest_id'] = self.in_contest and self.contest.id
         context['show_problem'] = self.show_problem
         context['completed_problem_ids'] = user_completed_ids(self.request.profile) if authenticated else []
         context['editable_problem_ids'] = user_editable_ids(self.request.profile) if authenticated else []
